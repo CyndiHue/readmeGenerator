@@ -1,14 +1,20 @@
 import inquirer from "inquirer";
 import fs from "fs/promises";
 
-// let {description, title} = await inquirer
-let {description} = await inquirer
+// let {description, tableOfContents, installation, Usage, license, contributing, tests, questions} = await inquirer
+let {title, description} = await inquirer
   .prompt([
     {
         type: 'input',
-        name: 'description',
-        message: "Write a description of your project",
+        name: 'title',
+        message: "Write a title for your project:",
     },
+    {
+        type: 'input',
+        name: 'description',
+        message: "Write a description of your project:",
+    },
+
     // {
     //     type: 'list',
     //     name: 'license',
@@ -20,12 +26,16 @@ let {description} = await inquirer
     // }
   ]) 
 
- let readmeText = `# Project Description
+ let readmeText = 
+ `# Title
+ ${title}
+
+ ## Project Description
   ${description}
 
-  ## The second largest heading
+## The second largest heading
 //   $ { generateLicense(license)}
-//   return strings based off of...
+//   return string
 
   ###### The smallest heading
   
