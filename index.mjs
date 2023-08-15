@@ -1,8 +1,7 @@
 import inquirer from "inquirer";
 import fs from "fs/promises";
 
-// let {description, tableOfContents, installation, Usage, license, contributing, tests, questions} = await inquirer
-let {title, description, license, installation, usage, github, email, tests} = await inquirer
+let {title, description, license, installation, usage, contributions, github, email, tests, questions} = await inquirer
   .prompt([
     {
         type: 'input',
@@ -60,7 +59,14 @@ let {title, description, license, installation, usage, github, email, tests} = a
       type: 'input',
       name: 'email',
       message: "Enter your email so user can contact you:",
+    },
+
+    {
+      type: 'input',
+      name: 'questions',
+      message: "Instructions for questions user may have:",
     }
+
   ]) 
   
   let readmeText = 
@@ -69,6 +75,21 @@ let {title, description, license, installation, usage, github, email, tests} = a
 
  ## Project Description
   ${description}
+
+ ## Table Of Contents
+
+  1. [License](#license)
+
+  2. [Installation](#installation)
+
+  3. [Usage](#usage)
+
+  4. [Contributions](#contributions)
+
+  5. [Tests](#tests)
+
+  6. [Questions](#questions)
+
 
  ## License
   ${generateLicense(license)}
@@ -86,10 +107,12 @@ let {title, description, license, installation, usage, github, email, tests} = a
   ${tests}
  
  ## Questions
-  ${github}
-  ${email}
+ ${questions}
 
-  ###### The smallest heading
+ ${github}
+
+ [${email}](${email})
+
   
   `
   fs.writeFile("README.md", readmeText)
