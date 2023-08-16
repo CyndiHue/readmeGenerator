@@ -28,25 +28,25 @@ let {title, description, license, installation, usage, contributions, github, em
     {
       type: 'input',
       name: 'installation',
-      message: "Explain the steps needed for installation",
+      message: "Explain all steps needed for installation:",
     },
     
     {
       type: 'input',
       name: 'tests',
-      message: "What test instructions should the user know",
+      message: "What instructions for running tests should the user know:",
     },
     
     {
       type: 'input',
       name: 'usage',
-      message: "What are some instructions for usage of this project?",
+      message: "What are some instructions for using this project?",
     },
 
     {
       type: 'input',
       name: 'contributions',
-      message: "What are some instructions for contributing to this project?",
+      message: "What are some instructions for how to contribute to this project?",
     },
     
     {
@@ -115,7 +115,7 @@ let {title, description, license, installation, usage, contributions, github, em
 
   
   `
-  fs.writeFile("README.md", readmeText)
+  fs.writeFile("READMEGen.md", readmeText)
  
 
 

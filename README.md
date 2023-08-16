@@ -1,8 +1,8 @@
 # Title
-  readme
+  README Generator
 
  ## Project Description
-  makes things faster
+  This README generator will allow to quickly make a readme file
 
  ## Table Of Contents
 
@@ -23,21 +23,24 @@
   [![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
   
  ## Installation
-  none
+  Must use an IDE and/or terminal in order to view and run 
 
  ## Usage
-  none
+  you need node js. open in IDE, open index.mjs in an integrated terminal then run index.mjs command to begin
 
  ## Contributions
-  none
+  contact me 
  
  ## Tests
-  none
+  node.mjs
+  
+  https://drive.google.com/file/d/1g7tZYGW0_W7FLzsnKO7uUYWAp9U1Iika/view
  
  ## Questions
- none
+ contact me via email
 
- https://github.com/CyndiCodes/cyndis_portfolio
+
+ https://github.com/CyndiCodes?tab=repositories
 
  [huertascyn@gmail.com](huertascyn@gmail.com)
 
